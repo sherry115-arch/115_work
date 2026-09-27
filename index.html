@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3f7ff">
+  <meta name="description" content="瀏覽學生標誌作品 PDF。">
+  <title>學生標誌作品｜作品瀏覽</title>
+  <style>
+    :root { color-scheme: light; --ink:#243654; --muted:#63748e; --blue:#4b78cc; --line:#dce5f2; }
+    * { box-sizing:border-box; }
+    body { margin:0; min-height:100vh; font-family:system-ui,-apple-system,"Segoe UI","Noto Sans TC",sans-serif; color:var(--ink); background:radial-gradient(ellipse at 12% 0%,#e4f1ff 0,transparent 34%),radial-gradient(ellipse at 100% 14%,#efe8ff 0,transparent 28%),#f7f9fd; }
+    .page { width:min(1180px,100%); margin:auto; padding:clamp(16px,3vw,32px); }
+    header { display:flex; align-items:center; gap:16px; margin:0 0 20px; }
+    .icon { display:grid; place-items:center; flex:0 0 54px; width:54px; height:54px; border-radius:18px; background:#fff; box-shadow:0 8px 24px #27477817; font-size:28px; }
+    h1 { font-size:clamp(1.4rem,3vw,2rem); margin:0 0 4px; letter-spacing:.04em; }
+    .subtitle { margin:0; color:var(--muted); font-size:clamp(.94rem,1.8vw,1.05rem); }
+    .card { overflow:hidden; border:1px solid var(--line); border-radius:20px; background:#fff; box-shadow:0 16px 44px #223e6812; }
+    .toolbar { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px; padding:14px 16px; border-bottom:1px solid var(--line); }
+    .hint { color:var(--muted); font-size:.94rem; }
+    .actions { display:flex; flex-wrap:wrap; gap:9px; }
+    a.button { min-height:44px; display:inline-flex; align-items:center; justify-content:center; gap:7px; padding:9px 15px; border:1px solid #cad8ec; border-radius:12px; text-decoration:none; color:#294b80; background:#f8fbff; font-weight:650; font-size:.96rem; }
+    a.button.primary { color:#fff; background:var(--blue); border-color:var(--blue); }
+    a.button:hover { filter:brightness(.97); transform:translateY(-1px); }
+    .viewer { width:100%; height:min(79vh,1000px); min-height:560px; display:block; border:0; background:#eef2f8; }
+    .foot { margin:14px 4px 0; color:var(--muted); font-size:.9rem; line-height:1.65; }
+    @media(max-width:640px) { .page{padding:16px 12px;} header{align-items:flex-start;gap:12px;} .icon{width:46px;height:46px;flex-basis:46px;border-radius:15px;font-size:24px;} .toolbar{align-items:flex-start;} .actions{width:100%;} a.button{flex:1;} .viewer{height:72vh;min-height:420px;} }
+    @media(prefers-reduced-motion:reduce) { *,*::before,*::after{scroll-behavior:auto!important;transition:none!important;} }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div class="icon" aria-hidden="true">🖍️</div>
+      <div>
+        <h1>學生標誌作品</h1>
+        <p class="subtitle">一起欣賞同學們的創意作品</p>
+      </div>
+    </header>
+    <section class="card" aria-label="PDF 作品檢視區">
+      <div class="toolbar">
+        <span class="hint">作品集 PDF｜共 19 頁</span>
+        <div class="actions">
+          <a class="button primary" href="student-signs.pdf" target="_blank" rel="noopener">↗ 開新視窗</a>
+          <a class="button" href="student-signs.pdf" download>↓ 下載 PDF</a>
+        </div>
+      </div>
+      <iframe class="viewer" src="student-signs.pdf#view=FitH" title="學生標誌作品 PDF"></iframe>
+    </section>
+    <p class="foot">若此裝置沒有顯示內嵌 PDF，請按「開新視窗」或「下載 PDF」瀏覽。</p>
+  </main>
+</body>
+</html>
